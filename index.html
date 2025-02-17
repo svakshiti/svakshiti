@@ -11,7 +11,9 @@
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
-            padding-bottom: 60px; /* Added space to prevent content from being blocked by the footer */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the page takes up at least the full viewport height */
         }
         header {
             background-color: #4CAF50;
@@ -37,6 +39,7 @@
         }
         section {
             padding: 20px;
+            flex-grow: 1; /* Ensures content area takes up remaining space */
         }
         .products {
             display: flex;
@@ -73,9 +76,8 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: relative; /* Changed from fixed to relative */
-            bottom: 0;
             width: 100%;
+            position: relative; /* Changed from fixed to relative */
         }
 
         /* Responsive design */
@@ -83,7 +85,94 @@
             nav {
                 flex-direction: column;
             }
-            nav a {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAKSHITI - Vertical Farming Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Lato, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensures the page takes up at least the full viewport height */
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        section {
+            padding: 20px;
+            flex-grow: 1; /* Ensures content area takes up remaining space */
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: white;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product h3 {
+            color: #4CAF50;
+        }
+        .product a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            color: white;
+            background-color: #4CAF50;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .product a:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: relative; /* Changed from fixed to relative */
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+ nav a {
                 padding: 10px;
             }
             .products {
@@ -140,10 +229,11 @@
         <h2>Contact Us</h2>
         <p>For inquiries or to learn more about our products, reach out to us at:</p>
         <p><strong>Email:</strong> svakshiti@gmail.com</p>
-        <p> </p>
+        <p>  </p>
     </section>
     <footer>
         <p>&copy; 2025 Swakshiti. All rights reserved.</p>
     </footer>
 </body>
 </html>
+ 
